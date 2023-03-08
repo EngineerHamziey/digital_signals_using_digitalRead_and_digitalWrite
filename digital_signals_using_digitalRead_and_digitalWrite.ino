@@ -7,6 +7,8 @@ void setup() {
   pinMode(5, OUTPUT);
 }
 
+
+
 void loop() {
   // TO Turn it on
   digitalWrite(2, HIGH);
@@ -18,7 +20,7 @@ void loop() {
   digitalWrite(2, LOW);
   digitalWrite(3, LOW);
   digitalWrite(4, LOW);
-  digitalWrite(5, LOW);  
+  digitalWrite(5, LOW);
   delay(500);
 }
 

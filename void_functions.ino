@@ -1,43 +1,37 @@
-#if 1
+#if 0
+
+//a void function is a function that doesn't return a value
+void onLeds() {
+  digitalWrite(2, HIGH);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, HIGH);
+}
+
+void offLeds() {
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  digitalWrite(5, LOW);
+}
+
+//we have 4 LEDS. We have an led one pin 3, by default
 void setup() {
-// ==========================================================
-  #if 0//increment and decrement
-  int i = 5;
-  i = i + 2; or  i += 2;new i = old i + 2
-  i.e i = 7//same goes for other operators -, *, /, %(modulus) 
-  short form
-  if it were 1
-  i++, meaning i = i + 1 or i += 1
-  i-, meaning i = i - 1 or i -= 1
-  
-  #endif
-// ========================================================
-  Serial.begin(9600);
-  //for (initialization; condition; increment/decrement)
-  for(int pinNumber = 2; pinNumber <= 5; pinNumber++ ){
-    Serial.println(pinNumber);
-    pinMode(pinNumber, OUTPUT);
-  }
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
 }
+
+
 void loop() {
-  for(int pinNumber = 2; pinNumber <= 5; pinNumber++ ){
-    Serial.println(
-      "LED " +
-      String(pinNumber) +
-      "ON"
-    );
-    digitalWrite(pinNumber, HIGH);
-    delay(500);
-  }
+  // TO Turn it on
+  onLeds();
+  delay(500);//takes in integer, and the default unit milliseconds
   
-  for(int pinNumber = 5; pinNumber >= 2; pinNumber-- ){
-    Serial.println(
-      "LED " +
-      String(pinNumber) +
-      "ON"
-    );
-    digitalWrite(pinNumber, LOW);
-    delay(500);
-  }
+  // TO Turn it OFF
+  offLeds();
+  delay(500);
 }
+
 #endif
